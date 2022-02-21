@@ -1,5 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import User
+from .authentication import ViewAccessControl
+
+
 
 def LoginView(request):
 
@@ -12,8 +15,15 @@ def LoginView(request):
     return render(request, 'login.html')
 
 
+@ViewAccessControl
 def HomeView(request):
     return render(request, 'home.html')
 
+
+@ViewAccessControl
 def AdminView(request):
     return render(request, 'admin.html')
+
+
+def UnauthorizedPageView(request):
+    return render(request, 'unauthorized_page.html')

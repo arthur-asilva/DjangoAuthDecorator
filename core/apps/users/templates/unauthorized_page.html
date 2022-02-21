@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Admin</title>
+    <title>Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -22,15 +22,16 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="{% url 'user_home_view' %}">Home</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Admin</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'user_admin_view' %}">Admin</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <h3>HEY! YOU ARE IN <strong>ADMIN</strong> VIEW</h3>
+    <h3>UNAUTHORIZED ACCESS.</h3>
+    Back to <a href="{% url 'user_home_view' %}">HOME</a>.
 </body>
 </html>
