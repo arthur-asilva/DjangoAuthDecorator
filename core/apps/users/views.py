@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 
 def LoginView(request):
-    return HttpResponse("First view to routers test")
+    return render(request, 'login.html')
