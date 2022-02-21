@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Login</title>
+    <title>Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -15,23 +15,22 @@
         .login-form h2 { margin: 0 0 15px; }
         .form-control, .btn { min-height: 38px; border-radius: 2px; }
         .btn { font-size: 15px; font-weight: bold; }
+        strong{ color: #999; }
     </style>
 </head>
 <body>
-    <div class="login-form">
-        <form method="post">
-            {% csrf_token %}
-            <h2 class="text-center">Log in</h2>       
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Username" name="user" required>
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password" name="password" required>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block">Log in</button>
-            </div>
-        </form>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'user_admin_view' %}">Admin</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h1>HEY! YOU ARE IN <strong>HOME</strong> VIEW</h1>
 </body>
 </html>
